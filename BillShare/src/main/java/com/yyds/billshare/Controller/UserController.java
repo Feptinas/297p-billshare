@@ -19,7 +19,7 @@ import java.io.File;
 import java.io.IOException;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000/", allowCredentials = "true", allowedHeaders = "*")
+//@CrossOrigin(maxAge=3600)
 public class UserController {
 
     // image save path

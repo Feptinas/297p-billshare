@@ -5,14 +5,14 @@
 --
 -- flush privileges;
 
-create database if not exists BillShare;
+create database if not exists billshare;
 
-use BillShare;
+use billshare;
 
 DROP TABLE IF EXISTS indebt;
 DROP TABLE IF EXISTS own;
 DROP TABLE IF EXISTS bill;
-DROP TABLE IF EXISTS BillShare.user;
+DROP TABLE IF EXISTS billshare.user;
 
 
 create table user (

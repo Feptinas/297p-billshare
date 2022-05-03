@@ -81,9 +81,12 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${project.parent.version}</version>
+                <configuration>
+                    <mainClass>com.yyds.billshare.BillshareApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
+        <finalName>BillShare</finalName>
     </build>
 
 </project>
