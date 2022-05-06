@@ -4,6 +4,8 @@ import './LoginPage.css'
 import Authentication from '../api/Authentication';
 import { useLocalStorage } from '../api/MyHooks';
 import { useHistory } from "react-router-dom";
+import dollarPng from "../image/dollar.png"
+import bg from "../image/background.svg"
 
 
 
@@ -38,9 +40,11 @@ const LoginPage: React.FC = (props:any) => {
         <IonPage >
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Login</IonTitle>
+                    <img src={dollarPng} alt="sss" id = "img" />
+                    <IonTitle >Bill Share</IonTitle>
                 </IonToolbar>
             </IonHeader>
+                <img src={bg} alt="" id = "bg"/>
             <IonContent className='ion-content'>
                     {isIncorrect && <IonItem lines="none" color='danger'><IonLabel class='ion-text-center'>Incorrect username or password</IonLabel></IonItem>}
                     {/* {!isIncorrect && <IonItem lines="none" color='white'><IonLabel class='ion-text-center'></IonLabel></IonItem>} */}
@@ -55,8 +59,8 @@ const LoginPage: React.FC = (props:any) => {
                             <IonInput type='password' value={password} onIonChange={(event) => setPassword(String(event.detail.value))}></IonInput>
                         </IonItem>
                     </IonList>
-                    <IonButton expand='block' onClick={() => login(email,password)}>Login</IonButton>
-                    <IonButton expand='block' color="secondary" onClick={() => history.push('/signup')} > SignUp</IonButton>
+                    <IonButton expand='block'  onClick={() => login(email,password)}>Login</IonButton>
+                    <IonButton expand='block'  color="secondary" onClick={() => history.push('/signup')} > Sign Up</IonButton>
             </IonContent>
         </IonPage>
     ); 
